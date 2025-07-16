@@ -45,7 +45,7 @@ function handleScrollAnimation() {
 }
 
 window.addEventListener('scroll', handleScrollAnimation);
-handleScrollAnimation(); // In case already in view on load
+handleScrollAnimation();
 const slideshow = document.querySelector('.slideshow');
 
 const observer = new IntersectionObserver((entries) => {
@@ -57,7 +57,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.3 // Trigger when 30% is visible
+  threshold: 0.3 
 });
 
 observer.observe(slideshow);
