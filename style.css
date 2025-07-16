@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,14 +15,14 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #333;
+  background: #0b3e27;
   z-index: 999;
   padding: 10px 0;
   transition: background 0.3s, box-shadow 0.3s;
 }
 
 header.scrolled {
-  background: #222;
+  background: #197149;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -123,14 +124,255 @@ header.scrolled {
     display: none;
   }
 }
+ .image-container {
+  position: relative;
+  display: inline-block;
+}
 
-.section {
-  height: 100vh;
-  padding-top: 80px;
+.image-container img {
+  display: block;
+  width: 100%; /* or a specific width */
+  height: auto;
+  user-select: none;
+}
+#text-overlay_1{
+  position:absolute;
+  top:28%;
+  left:28%;
+  font-size: large;
+  font-family: "Michroma";
+  font-weight: 1000;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 35%;  /* vertical center */
+  left: 26%; /* horizontal center */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Raleway";
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+#inquire-button{
+  position: absolute;
+  top:46%;
+  text-decoration-line: none;
+  border: 2px solid #0b3e27;
+  border-radius: 20px;
+  background-color:#0b3e27;
+  padding-bottom: 10px;
+}
+#inquire-button a {
+  text-decoration: none;
+  color: beige;
+  font-size:large;
+}
+#inquire-button:hover{
+  background-color: #197149;
+  transition: 0.5s ease ;
+}
+
+#text-overlay_2{
+  position: absolute;
+  top: 40%;  /* vertical center */
+  left: 72%;
+  font-size:18px;
+  color:rgb(156 102 83);
+  
+}
+#watch-name{
+  color:rgb(231 195 182);
+  font-size: 100px;
+}
+.color-white{
+  color:rgba(255, 255, 255, 0.884);
+  font-size:30px;
+}
+.color-beige-type{
+  color:rgb(156 102 83);
+  font-size: 35px;
+}
+#watch-sect{
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 36px;
-  background: #f4f4f4;
-  border-bottom: 1px solid #ccc;
+  background: linear-gradient(0deg, rgb(240, 240, 240), rgb(255, 255, 255));
 }
+#buy{
+  text-align:left;
+  position: absolute;
+  top: 910px;
+  left: 85px;
+  font-size: 20px;
+  font-weight: 2px;
+
+}
+.dial{
+  position:relative;
+  left: 950px;
+  bottom: 310px;
+  right: 80px;
+}
+.var{
+  position:relative;
+  right: 160px;
+  font-weight: 15px;
+}
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  overflow-x: hidden; 
+}
+
+/* Slideshow Container */
+.slideshow {
+  position: relative;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+   width: 100vw; /* full viewport width */
+  height: 100vh; /* full viewport height */
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(100px); /* Start off-screen (below) */
+  transition: all 0.8s ease-in-out;
+}
+.slideshow.show-on-scroll {
+  opacity: 1;
+  transform: translateY(0); /* Slide to natural position */
+}
+
+/* Slide Images */
+.slide {
+ width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Arrow Button */
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent */
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#nextBtn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#rolex{
+  text-align:left;
+  margin-left: 90px;
+  margin-top: 80px;
+  margin-right: 90px;
+  font-size: 20px;
+  background: linear-gradient(0deg, rgb(240, 240, 240), rgb(255, 255, 255));
+  user-select: none;
+}
+.contact-bar{
+  background-color: black;
+  height: 8vh;
+  width: 100%;
+  font-size: large;
+  font-weight: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+.contact-hover{
+  text-decoration: none;
+  color:white;
+}
+.contact-hover:hover{
+  color: #197149;
+}
+/* --- Only Responsive Media Queries --- */
+
+@media (max-width: 1200px) {
+  /* Hero section: scale image and text */
+  .image-container img {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+  #watch-name { font-size: 3.5rem; }
+  #text-overlay_1 { font-size: 1.25rem; }
+  #text-overlay_2 { font-size: 1rem; padding: 0 15px; }
+  #inquire-button { padding: 8px 16px; }
+}
+
+@media (max-width: 768px) {
+  /* Hero: stack overlays vertically */
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  #watch-name { font-size: 2.5rem; margin: 10px 0; }
+  #text-overlay_1 { font-size: 1rem; margin: 5px 0; }
+  #text-overlay_2 { font-size: 0.9rem; margin: 5px 0; }
+  #inquire-button { margin: 10px 0; }
+
+  /* About section: single column */
+  #about { flex-direction: column; padding: 30px 10px; }
+  #buy, .dial { margin: 20px 0; text-align: center; }
+  .dial img { max-width: 50%; }
+
+  /* Slideshow: full width */
+  .slideshow { width: 100%; max-width: none; }
+
+  /* Text block */
+  #rolex { margin: 30px 15px; font-size: 0.95rem; }
+
+  /* Footer */
+  .contact-bar { flex-direction: column; gap: 12px; }
+}
+
+@media (max-width: 480px) {
+  /* Hero text smaller */
+  #watch-name { font-size: 2rem; }
+  #text-overlay_1, #text-overlay_2 { font-size: 0.85rem; }
+  #inquire-button a { font-size: 0.85rem; padding: 6px 12px; }
+
+  /* About: smaller images and text */
+  #buy { font-size: 0.9rem; }
+  .dial img { max-width: 70%; }
+
+  /* Slideshow images fill */
+  .slide { object-fit: cover; }
+
+  /* Footer text */
+  .contact-bar div { font-size: 0.9rem; }
+}
+
+/* --- End Responsive Queries --- */
+
+
+

@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Responsive Landing Page</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Navigation Bar -->
   <header id="navbar">
     <div class="nav-container">
-      <div class="logo">LANDING PAGE</div>
+      <div class="logo">Rolex</div>
       <div class="hamburger" onclick="toggleMenu()">☰</div>
       <nav>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -26,14 +31,107 @@
 
   <!-- Sections -->
   <section id="home" class="section">
-    <h1>Home</h1>
-    
-    
-    </section>
-  <section id="services" class="section"><h1>Services</h1></section>
-  <section id="about" class="section"><h1>About</h1></section>
-  <section id="contact" class="section"><h1>Contact</h1></section>
+    <div class="image-container">
+  <img src="watch.png" alt="Image" />
+  <div class="text-overlay" id="text-overlay_1">OYSTER PERPETUAL</div>
+  <div class="text-overlay" id="watch-name">Day-date </div>
+ <div class="text-overlay"  id="inquire-button" >
+  <a href="#"> Inquire us </a>
+ </div> 
+      
+  <div class="text-overlay" id="text-overlay_2">Ideal accomplishments
+<br>
+<span class="color-beige-type">The Oyster</span>
+<span class="color-white">Perpetual</span>
+<br>
+<span class="color-beige-type" style="font-size: 30px;">Day-Date 40 </span>
+<span class="color-white" style="font: size 30px;">in</span>
+<span class="color-beige-type" style="font-size: 30px;">18 ct</span>
+<br>
+<span class="color-beige-type" style="font-size:30px;">Everrose Gold </span>
+<span class="color-white">with</span>
+<span class="color-beige-type">a</span>
+<br>
+<span class="color-beige-type">slate ombré</span>
+<span class="color-white">dial</span>
+<br>
+<span class="color-beige-type">fluted</span>
+<span class="color-white">bezel and</span>
+<span class="color-beige-type">a</span>
+<br>
+<span class="color-beige-type">President</span>
+<span class="color-white">bracelet</span>
+</div>
+</div>
+  </section>
+  <section id="about" class="section">
+     <div id="buy">
+     <b><span style="font-size: 30px;">Day-date 40</span></b> 
+      <br>
+      <br>
+      <span>Oyster, 40 mm, Everose gold</span>
+      <br>
+      <span>Reference 228235</span>
+      <br>
+      <span>₹ 4,365,000</span>
+     </div>
+    <div id="watch-sect">
+      <img src="small_watch.avif" alt="watch-image" height="400vh">
+      
+    </div>
+    <div id="dial">
+    </div>
+    <div class="dial">
+      <img src="watch_dial.avif" alt="image-dial" width="200px" height="200px" >
+      <span class="var">More Variations</span>
+    </div>
+  </section>
+ 
+    <div class="slideshow">
+      <img class="slide" src="watch_slide1.avif">
+      <img class="slide" src="watch_slide2.avif">
+      <img class="slide" src="watch_slide3.avif">
 
+      <button id="nextBtn">&#9654;</button> <!-- Unicode for right arrow -->
+    </div>
+    <section id="about">
+      <div id="rolex">
+        <h1 style="color: #0b3e27; font-size: 40px;">Rolex</h1>
+       <h3>An unrivalled reputation<br>for quality and expertise</h3>
+
+  <p>
+    <em>Manufacture</em> headquartered in Geneva, Rolex is recognized for its expertise and the exceptional quality of its products.
+  </p>
+
+  <p>
+    <strong>Hans Wilsdorf</strong>, the founder of the company, envisioned a notion of <em>perpetual excellence</em> — a vision that led to major watchmaking innovations.
+  </p>
+
+  <p>
+    These innovations include the <strong>Oyster</strong>, the world’s first waterproof wristwatch, and the <strong>Perpetual rotor</strong>, a self-winding mechanism. The brand designs, develops, and produces the majority of its watch components in-house.
+  </p>
+
+  <p>
+    Beyond watchmaking, Rolex is deeply committed to supporting the <em>arts and culture</em>, <em>sport</em>, <em>exploration</em>, and global efforts to preserve the planet.
+  </p>
+
+  <p>
+    It is a responsible company whose products are made to last. In its quest for excellence, Rolex continually improves not only its watches but also its environmental footprint and impact on society.
+  </p>
+</section>
+<section id="contact">
+  <div class="contact-bar">
+    <div><a href="#" class="contact-hover">Contact</a> |</div>
+    <div><a href="#" class="contact-hover">Certified retailers</a> |</div>
+    <div><a href="#" class="contact-hover">Facebook</a> |</div>
+    <div><a href="#" class="contact-hover">Instagram</a> |</div>
+    
+  </div>
+</section>
+
+      </div>
+    </section>
+  </section>
   <script src="script.js"></script>
 </body>
 </html>
